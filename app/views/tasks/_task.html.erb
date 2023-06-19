@@ -1,0 +1,12 @@
+<li class="list-group-item border-0 d-flex align-items-center ps-0">
+  <%= form_for task, data: { controller: :tasks } do |f| %>
+    <%= f.check_box :done,
+                    type: :check_box,
+                    class: 'form-check-input me-3',
+                    id: dom_id(task),
+                    data: { action: "input->tasks#change", target: "tasks.input"}  %>
+    <%= f.label task.task,
+                class: 'form-check-label ' + (task.done? ? 'text-decoration-line-through' : ''),
+                for: dom_id(task) %>
+  <% end %>
+</li>

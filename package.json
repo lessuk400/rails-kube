@@ -1,0 +1,16 @@
+{
+  "name": "kube-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oleksii <alex.ostashchenko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.10.5",
+    "sass": "^1.63.4"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
+}
