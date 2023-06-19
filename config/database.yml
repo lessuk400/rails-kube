@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: kube_test_production
-  username: kube_test
-  password: <%= ENV["KUBE_TEST_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
